@@ -6,6 +6,7 @@ nginx_md5='437f9fd29c8965fa0e71f20203ed973d';
 
 
 function _init() {
+	yum -y install openssl
 	mkdir -p /opt/nginx/logs /opt/nginx/pids/ /etc/nginx/server.d/ /etc/nginx/upstream.d
         #touch /opt/nginx/logs/error.log /opt/nginx/logs/access.log /opt/nginx/pids/nginx.pid
 }
@@ -29,9 +30,9 @@ function _install() {
 
 	cp /opt/install/nginx.conf /etc/nginx/nginx.conf
 
-	cp /opt/install/server_admin.souyidai.com.conf /etc/nginx/server.d/
-	cp /opt/install/upstream_jenkins.conf /etc/nginx/upstream.d/
-	cp /opt/install/upstream_nexus.conf /etc/nginx/upstream.d/
+#	cp /opt/install/server_admin.souyidai.com.conf /etc/nginx/server.d/
+#	cp /opt/install/upstream_jenkins.conf /etc/nginx/upstream.d/
+#	cp /opt/install/upstream_nexus.conf /etc/nginx/upstream.d/
 	echo 'nginx install success !!!'
 }
 

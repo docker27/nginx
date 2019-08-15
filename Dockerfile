@@ -1,4 +1,4 @@
-FROM qianchun27/centos7:lastest
+FROM qianchun27/centos:7
 
 MAINTAINER qianchun, qianchun27@hotmail.com
 
